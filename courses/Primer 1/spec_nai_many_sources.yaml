@@ -8,9 +8,9 @@ gamma_detector:
     latitude_deg: 35.0
     longitude_deg: 253.4
     elevation_m: 1620
-foregrounds:
+sources:
   - isotope: Am241
-    sources:
+    configurations:
       - Am241,100uC
       - Am241,100uC {13,10}
       - Am241,100uC {13,30}
@@ -19,7 +19,7 @@ foregrounds:
       - Am241,100uC {26,50}
       - Am241,100uC {50,2}
   - isotope: Ba133
-    sources:
+    configurations:
       - Ba133,100uC
       - Ba133,100uC {10,20}
       - Ba133,100uC {26,10}
@@ -27,19 +27,19 @@ foregrounds:
       - Ba133,100uC {74,20}
       - Ba133,100uC {50,30}
   - isotope: Bi207
-    sources:
+    configurations:
       - Bi207,100uC
       - Bi207,100uC {10,30}
       - Bi207,100uC {26,10}
   - isotope: Cf249
-    sources:
+    configurations:
       - Cf249,100uC
   - isotope: Co57
-    sources:
+    configurations:
       - Co57,100uC
       - Co57,100uC {13,10}
   - isotope: Co60
-    sources:
+    configurations:
       - Co60,100uC
       - Co60,100uC {10,10}
       - Co60,100uC {10,30}
@@ -47,8 +47,11 @@ foregrounds:
       - Co60,100uC {26,40}
       - Co60,100uC {82,30}
       - Co60,100uC {82,60}
+  - isotope: Cosmic
+    configurations:
+      - Cosmic
   - isotope: Cs137
-    sources:
+    configurations:
       - Cs137,100uC
       - Cs137,100uC {6,2}
       - Cs137,100uC {26,10}
@@ -59,25 +62,25 @@ foregrounds:
       - Cs137InGradedShield1
       - Cs137InGradedShield2
   - isotope: Eu152
-    sources:
+    configurations:
       - Eu152,100uC
       - Eu152,100uC {10,10}
       - Eu152,100uC {10,30}
       - Eu152,100uC {30,50}
       - Eu152,100uC {74,20}
   - isotope: Eu154
-    sources:
+    configurations:
       - Eu154,100uC
       - Eu154,100uC {10,10}
       - Eu154,100uC {74,20}
   - isotope: F18
-    sources:
+    configurations:
       - F18,100uC
       - F18,100uC {10,20}
       - F18,100uC {10,50}
       - F18,100uC {26,30}
   - isotope: Ga67
-    sources:
+    configurations:
       - Ga67,100uC
       - Ga67,100uC {6,10}
       - Ga67,100uC {6,20}
@@ -85,17 +88,17 @@ foregrounds:
       - Ga67,100uC {50,16}
       - Ga67,100uC {82,20}
   - isotope: Ho166m
-    sources:
+    configurations:
       - Ho166m,100uC
       - Ho166m,100uC {10,20}
       - Ho166m,100uC {26,20}
       - Ho166m,100uC {74,30}
   - isotope: I123
-    sources:
+    configurations:
       - I123,100uC
       - I123,100uC {10,30}
   - isotope: I131
-    sources:
+    configurations:
       - I131,100uC
       - I131,100uC {10,10}
       - I131,100uC {10,30}
@@ -104,12 +107,12 @@ foregrounds:
       - I131,100uC {82,10}
       - I131,100uC {10,20;50,5}
   - isotope: In111
-    sources:
+    configurations:
       - In111,100uC
       - In111,100uC {10,20}
       - In111,100uC {50,20}
   - isotope: Ir192
-    sources:
+    configurations:
       - Ir192,100uC
       - Ir192,100uC {10,20}
       - Ir192,100uC {26,40}
@@ -120,37 +123,38 @@ foregrounds:
       - Ir192Shielded2
       - Ir192Shielded3
   - isotope: K40
-    sources:
+    configurations:
+      - PotassiumInSoil
       - K40,100uC
       - K40inCargo1
       - K40inCargo2
       - K40inCargo3
       - K40inCargo4
   - isotope: Mo99
-    sources:
+    configurations:
       - Mo99,100uC
       - Mo99,100uC {26,20}
       - Mo99,100uC {50,40}
   - isotope: Na22
-    sources:
+    configurations:
       - Na22,100uC
       - Na22,100uC {10,10}
       - Na22,100uC {10,30}
       - Na22,100uC {74,20}
   - isotope: Np237
-    sources:
+    configurations:
       - 1gNp237,1kC
       - 1kgNp237
       - Np237inFe1
       - Np237inFe4
       - Np237Shielded2
   - isotope: Pu238
-    sources:
+    configurations:
       - Pu238,100uC
       - Pu238,100uC {10,5}
       - Pu238,100uC {26,10}
   - isotope: Pu239
-    sources:
+    configurations:
       - 1kgPu239
       - 1kgPu239,1C {40,4}
       - 1kgPu239inFe
@@ -158,7 +162,8 @@ foregrounds:
       - 1kgPu239InFeAndPine
       - 1kgPu239inW
   - isotope: Ra226
-    sources:
+    configurations:
+      - UraniumInSoil
       - Ra226,100uC
       - Ra226inCargo1
       - Ra226inCargo2
@@ -167,20 +172,21 @@ foregrounds:
       - Ra226inSilica2
       - Ra226,100uC {60,100}
   - isotope: Sr90
-    sources:
+    configurations:
       - Sr90InPoly1,1C
       - Sr90InPoly10,1C
       - Sr90InFe,1C
       - Sr90InSn,1C
   - isotope: Tc99m
-    sources:
+    configurations:
       - Tc99m,100uC
       - Tc99m,100uC {7,10}
       - Tc99m,100uC {10,20}
       - Tc99m,100uC {13,30}
       - Tc99m,100uC {26,30}
   - isotope: Th232
-    sources:
+    configurations:
+      - ThoriumInSoil
       - Th232,100uC
       - Th232inCargo1
       - Th232inCargo2
@@ -191,14 +197,14 @@ foregrounds:
       - ThPlate
       - ThPlate+Thxray,10uC
   - isotope: Tl201
-    sources:
+    configurations:
       - Tl201,100uC
       - Tl201,100uC {8,40}
       - Tl201,100uC {10,10}
       - Tl201,100uC {10,30}
       - Tl201,100uC {26,10}
   - isotope: U232
-    sources:
+    configurations:
       - U232,100uC
       - U232,100uC {10,10}
       - U232,100uC {10,30}
@@ -210,19 +216,19 @@ foregrounds:
       - U232inPineAndFe
       - U232,100uC {82,30}
   - isotope: U233
-    sources:
+    configurations:
       - 1kgU233At1yr
       - 1kgU233InFeAt1yr
       - 1kgU233At50yr
       - 1kgU233InFeAt50yr
   - isotope: U235
-    sources:
+    configurations:
       - 1kgU235
       - 1kgU235inFe
       - 1kgU235inPine
       - 1kgU235inPineAndFe
   - isotope: U238
-    sources:
+    configurations:
       - 1KGU238
       - 1KGU238Clad
       - 1KGU238inPine
@@ -235,46 +241,9 @@ foregrounds:
       - fiestaware
       - DUOxide
   - isotope: Y88
-    sources:
+    configurations:
       - Y88,100uC
       - Y88,100uC {10,50}
       - Y88,100uC {26,30}
       - Y88,100uC {80,50}
-backgrounds:
-  - cosmic: true
-    terrestrial: true
-    K40_percent: 8
-    U_ppm: 8
-    Th232_ppm: 8
-    attenuation: 0
-    low_energy_continuum: 0
-    high_energy_continuum: 0
-    suppression_scalar: 1
-  - cosmic: true
-    terrestrial: true
-    K40_percent: 8
-    U_ppm: 10
-    Th232_ppm: 6
-    attenuation: 0
-    low_energy_continuum: 0
-    high_energy_continuum: 0
-    suppression_scalar: 1
-  - cosmic: true
-    terrestrial: true
-    K40_percent: 8
-    U_ppm: 8
-    Th232_ppm: 8
-    attenuation: 0
-    low_energy_continuum: 0
-    high_energy_continuum: 0
-    suppression_scalar: 1
-  - cosmic: true
-    terrestrial: true
-    K40_percent: 8
-    U_ppm: 12
-    Th232_ppm: 4
-    attenuation: 0
-    low_energy_continuum: 0
-    high_energy_continuum: 0
-    suppression_scalar: 1
 ...
